@@ -1,7 +1,25 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+//import Paper from '@material-ui/core/Paper';
+import LeftPane from "./LeftPane";
+import RightPane from "./RightPane";
+
+
+const styles ={
+	Paper:{
+		padding:20,
+		marginTop:10,
+		marginBottom:10
+	}
+}
 
 export default ()=>
-<div>
-	<h1>Exercises</h1>
-</div>
+	<Grid container>
+		<Grid item sm>
+			<LeftPane styles={styles}/>
+		</Grid>
+		<Grid item sm>
+			<RightPane styles={styles}/>
+		</Grid>
+	</Grid>
 	
