@@ -4,20 +4,29 @@ import Tab from "@material-ui/core/Tab"
 import Paper from '@material-ui/core/Paper';
 
 
-export default props =>
+export default ({muscles, category, onSelect}) => {
+  const index = category
+    ? muscles.findIndex(group => group === category) + 1
+    : 0
 
-   <Paper>
+  const onIndexSelect = (e,index) =>{
+          onSelect(index === 0 ? '': muscles[index - 1])
+       }
+
+return <Paper>
      <Tabs
-       value ={0}
+       value ={index}
+       onChange={onIndexSelect}
        indicatorColor="primary"
        textColor="primary"
        centered
      >
-       <Tab label="Item One" />
-       <Tab label="Item Two" />
-       <Tab label="Item Three" />
+     <Tab label="All"/>
+      {muscles.map((muscleGroup)=>
+         <Tab label={muscleGroup} />
+        )}
      </Tabs>
    </Paper>
+}
 
-
-//7:00	
+//4:40  	
