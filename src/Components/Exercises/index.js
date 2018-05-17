@@ -89,6 +89,5 @@ export default ({
 	</Grid>
 
 
-	// <Paper style ={styles.Paper}>
-	// Left Part
-	// </Paper>
+
+
