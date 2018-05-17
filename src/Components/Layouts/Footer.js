@@ -23,7 +23,7 @@ return <Paper>
      >
      <Tab label="All"/>
       {muscles.map((muscleGroup)=>
-         <Tab label={muscleGroup} />
+         <Tab key={muscleGroup} label={muscleGroup} />
         )}
      </Tabs>
    </Paper>
